@@ -2,7 +2,7 @@ FROM node:10-alpine as base
 ENV NODE_ENV=production
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --only=production \
+RUN npm ci --only=production \
     && npm cache clean --force
 ENV PATH /app/node_modules/.bin:$PATH
 
