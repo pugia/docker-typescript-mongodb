@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+    install:
+        runtime-versions:
+            docker: 18
+    pre_build:
+        commands:
+        - npm install typescript --g
+        - npm ci && npm cache clean --force
+    build:
+        commands:
+        - tsc
+artifacts:
+    type: zip
+    files:
+        - package.json
+        - package-lock.json
+        - Dockerrun.aws.json
+        - tsconfig.json
+        - 'dist/**/*'
+        - Dockerfile
