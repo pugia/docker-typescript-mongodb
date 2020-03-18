@@ -18,7 +18,3 @@ RUN tsc
 FROM base as prod
 COPY --from=build /app/dist/ .
 CMD ["node", "index.js"]
-
-# docker build -t jetdata-api .
-# docker-compose up
-# docker-compose down
