@@ -13,7 +13,7 @@ import { Member } from "./models/member";
   app.use(bodyParser.urlencoded({ extended: false }));
 
   app.get("/", async (req: Request, res: Response) => {
-    return res.send(`Loading ${Math.random()}`);
+    return res.send(`Loading v1 of ${Math.random()}`);
   });
 
   app.get("/members", async (req: Request, res: Response) => {
