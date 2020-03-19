@@ -3,7 +3,8 @@
 To run this app locally, do the following:
 
 Create a `.env` file with the following contents:
-`mongoDB=mongodb://mongo:27017/docker-typescript`
+`mongoDB=mongodb://mongo:27017/docker-typescript
+NODE_ENV=development`
 
 Run `npm install`
 
