@@ -17,5 +17,6 @@ artifacts:
         - package.json
         - package-lock.json
         - tsconfig.json
+        - Dockerrun.aws.json
         - 'dist/**/*'
         - Dockerfile
