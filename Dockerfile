@@ -1,8 +1,11 @@
 FROM node:10-alpine as base
 ENV NODE_ENV=production
+
+EXPOSE 80
+
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production \
+RUN npm install --only=production \
     && npm cache clean --force
 ENV PATH /app/node_modules/.bin:$PATH
 
@@ -17,4 +20,4 @@ RUN tsc
 
 FROM base as prod
 COPY --from=build /app/dist/ .
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]

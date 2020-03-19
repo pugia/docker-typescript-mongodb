@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 
 import { Member } from "./models/member";
 
-module.exports.register = async (req: Request, res: Response) => {
+const register = async (req: Request, res: Response) => {
   const { email, password, firstName, lastName } = req.body;
 
   if (!email)
@@ -109,3 +109,5 @@ function incrementUserName(username: string) {
     return username + "-1";
   }
 }
+
+export { register }

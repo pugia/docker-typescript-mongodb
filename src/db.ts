@@ -1,7 +1,7 @@
 import { Request, Response, ErrorRequestHandler } from "express";
 const mongoose = require("mongoose");
 
-function connect() {
+const connect = async () => {
   return new Promise((resolve, reject) => {
     mongoose
       .connect(process.env.mongoDB, {
@@ -20,8 +20,4 @@ function connect() {
   });
 }
 
-function close() {
-  return mongoose.disconnect();
-}
-
-module.exports = { connect, close };
+export { connect }
