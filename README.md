@@ -1,6 +1,6 @@
 # Docker/TypeScript/MongoDB Starter App
 
-[YouTube Video](https://www.youtube.com/watch?v=h7k1eOa9CrI). 
+[YouTube Video](https://www.youtube.com/watch?v=h7k1eOa9CrI) 
 
 To run this app locally, do the following:
 
